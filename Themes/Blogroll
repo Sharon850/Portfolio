@@ -1,0 +1,229 @@
+<!--   Blogroll Theme by repealinq, keep the credit please. Enjoy-->
+
+<head>
+<link href='http://fonts.googleapis.com/css?family=Grand+Hotel' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Cabin+Condensed' rel='stylesheet' type='text/css'>
+
+<title>{Title} blogroll</title>
+<link rel="shortcut icon" href="{Favicon}">
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+<!--[if IE]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <link rel="stylesheet" type="text/css" href="http://static.tumblr.com/fxpo5zq/XZum5p9k0/standard.css">
+
+
+    
+
+<style type="text/css">
+
+
+
+body {
+    color: #777;
+    background:#fafafa;
+    background-repeat: repeat;
+    background-attachment: fixed;
+    font-family: consolas;
+    line-height:110%;
+    font-size: 10px;
+}
+
+body, a, a:hover {cursor: url(http://cur.cursors-4u.net/cursors/cur-9/cur817.cur), progress;}
+
+
+::-webkit-scrollbar {width: 4px; height: 4px; background: #f0f0f0; }
+::-webkit-scrollbar-thumb { background-color:#585656; -webkit-border-radius: 0ex; }
+
+
+   
+a:link, a:active, a:visited{
+  color:#f39aab;
+   text-decoration: none;
+}
+
+a:hover {
+   color:#f77b94;
+   text-decoration: none;
+   cursor: url(http://cur.cursors-4u.net/cursors/cur-9/cur817.cur); 
+   }
+
+
+#content {    
+    cursor: url(http://cur.cursors-4u.net/cursors/cur-9/cur817.cur);
+    width: 500px;
+     margin-left:400px;
+     margin-top:56px;
+    background:;
+}
+
+
+iframe#tumblr_controls {
+position:fixed !important;-webkit-filter: invert(100%) ;
+-moz-transition: all 0.8s ease-out;
+-webkit-transition: opacity 0.7s linear;
+-webkit-transition: all 0.8s ease-out;
+transition: all 0.8s ease-out;
+opacity: 0.5;}
+
+iframe#tumblr_controls {
+    top:2px !important;
+    right:3px !important; 
+    position: fixed !important;
+    -webkit-transition: opacity 0.7s linear;
+    opacity: 0.5;
+    -webkit-transition: all 0.8s ease-out;
+    -moz-transition: all 0.8s ease-out;
+    transition: all 0.8s ease-out;
+}
+
+iframe#tumblr_controls:hover {
+    -webkit-transition: opacity 0.7s linear;
+    opacity: 1;
+    -webkit-transition: all 0.4s ease-out;
+    -moz-transition: all 0.4s ease-out;
+    transition: all 0.4s ease-out;
+}
+
+
+.entry {
+    float: left;
+    width: 580px;
+	padding:5px;
+    display: block;
+    position: relative;
+	height: 520px;
+	margin-top:10px;
+}
+
+
+	
+#blogs {
+width: 540px;
+height: 500px;
+overflow-y: scroll;
+padding-top: 7px;
+padding-left: -2px;
+padding-right: 7px;
+background-color: #ddd;
+text-transform:uppercase;
+}
+
+#blogs img {
+width:48px;
+height:48px;
+opacity: 0.7;
+-webkit-transition-duration:.7s;}
+
+#blogs img:hover {
+opacity:.9;
+border-radius:27px;
+-webkit-transition: 0.2s ease-in;}
+
+#pagination{
+    display:none;
+}
+
+#sidebar {top:-170px;
+position:fixed;
+width:510px;
+padding-top:150px;
+left:59%;
+z-index:99;
+position:fixed;
+margin-left:-250px;
+-webkit-transition: all 0.5s ease; 
+-moz-transition: all 0.5s ease; 
+transition: all 0.5s ease;
+}
+
+
+#sidebar:hover {top:-140px;
+-webkit-transition: all 0.5s ease; 
+-moz-transition: all 0.5s ease; 
+transition: all 0.5s ease;
+}
+
+#links{
+    font-size:13px;
+    font-family: 'Cabin Condensed', sans-serif;
+    text-transform:uppercase;  
+    }
+
+.text {
+    padding: 10px;
+}
+
+
+#s-m-t-tooltip{
+    box-shadow:1px 1px 3px rgba(0,0,0,.1);
+    max-width:250px;
+    margin-top:25px;
+    margin-left:15px;
+    padding-left:4px;
+    padding-right:4px;
+    border:1px solid #ddd;
+    z-index:1000;
+    background-color:#ffffff;
+    color:#aaaaaa;
+    font-family:consolas;
+    z-index:999999999;
+    font-size:7px;
+    letter-spacing:1px;
+    font-style:normal;
+    text-transform:uppercase;
+    line-height:14px;
+}
+
+
+</style>
+</head>
+<body>
+
+<div id="sidebar" align="center">
+<div id="links">
+<a href="/">home</a>
+<a href="/ask">message</a>
+<a href="http://repealinq.tumblr.com" >credit</a>
+<br><p><br><br></div>
+<div style="font-family: 'Grand Hotel', cursive; font-size:27px;">Blogs i follow
+</div>
+</div>
+
+<div id="content">
+
+
+<div class="entry">
+<div id="blogs">
+<center>
+
+{block:Following}{block:Followed}<a title='{FollowedName}' target='_blank' href='{FollowedURL}'>
+<img src='{FollowedPortraitURL-48}' />
+{/block:Followed}{/block:Following}
+</center>
+
+
+
+</center>
+
+
+</div>
+</div>
+            
+                
+<script src="http://static.tumblr.com/iuw14ew/VSQma1786/jquery.style-my-tooltips.js"></script>
+<script>
+(function($){
+$(document).ready(function(){
+$("[title],a[title],img[title]").style_my_tooltips({ 
+    tip_follows_cursor:true,
+    tip_delay_time:100,
+    tip_fade_speed:300,
+    attribute:"title"
+});
+});
+})(jQuery);
+</script>
+
+</html>
