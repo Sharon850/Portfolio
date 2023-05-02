@@ -1,0 +1,365 @@
+<!--
+ 
+Theme 7 by repealinq.tumblr.com
+keep the credits & enjoy!
+-->
+ 
+<head>
+ 
+<title>{title}</title>
+<link rel="shortcut icon" href="{Favicon}"/>
+<link rel="alternate" type="application/rss+xml" href="{RSS}">
+{block:Description}<meta name="description" content="{MetaDescription}" />{/block:Description}
+ 
+<meta name="color:Background" content="#ffffff"/>
+<meta name="color:Text" content="#000000"/>
+<meta name="color:Link" content="#555555"/>
+<meta name="color:Link Hover" content="#cccccc"/>
+<meta name="color:Sidebar" content="#fff"/>
+<meta name="color:Scrollbar" content="#eee"/>
+<meta name="if:show sidebar image" content="1"/>
+<meta name="if:Box Shadow" content="1"/>
+<meta name="text:Link One Title" content=""/>
+<meta name="text:Link One" content="" />
+<meta name="text:Link Three Title" content=""/>
+<meta name="text:Link Three" content=""/>
+<meta name="text:Link Four Title" content=""/>
+<meta name="text:Link Four" content=""/>
+<meta name="text:Link Two Title" content=""/>
+<meta name="text:Link Two" content=""/>
+<meta name="text:Link Five Title" content=""/>
+<meta name="text:Link Five" content=""/>
+<meta name="image:Sidebar" content=""/>
+<meta name="image:Background" content=""/>
+
+ 
+<style type="text/css">
+ 
+body{
+color:{color:Text};
+font-family:arial;
+font-size:10px;
+background-color:{color:Background};
+    background-image:url({Image:Background});
+background-repeat: repeat;
+
+}
+
+::-webkit-scrollbar-thumb{
+background-color: {color:scrollbar};
+border: 2px solid #fff;
+height:auto;
+}
+ 
+ 
+ 
+::-webkit-scrollbar {
+height:auto;
+width:8px;
+background-color: #999999;
+border: 4px solid #fff;
+}
+ 
+#post{
+width:600px;
+margin-left:470px;
+margin-right:auto;
+padding:5px;
+}
+ 
+a{color:{color:Link};text-decoration:none;} a:hover{color:{color:Link Hover};}
+ 
+.entry{
+width:250px;
+background:#fff;
+border:1px solid #f5f5f5;
+margin: 7px;
+padding:5px;
+{Block:Ifboxshadow}
+box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    -moz-box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    -webkit-box-shadow: 0 0 10px rgba(0,0,0,0.2);{/Block:Ifboxshadow}
+{block:PermalinkPage}
+width: 498px;
+height: auto;
+{/block:PermalinkPage}    
+}
+
+ 
+.entry .perma{
+color:#000;
+font-size:8px;
+opacity: 0; 
+padding:5px;
+-webkit-transition-duration: .75s;top:0px;
+width:auto; 
+height:auto;
+padding-bottom:4px;
+background-color: #fff; 
+position: absolute; 
+margin-top:30px;
+margin-left:12px;
+text-align:center;
+text-transform:uppercase;
+font-family:consolas;
+letter-spacing:1px;
+display:block;
+}
+ 
+.entry:hover .perma{opacity:.9;
+-webkit-transition: all 0.6s ease-out;-moz-transition: all 0.6s ease-out;transition: all 0.6s ease-out;}
+
+.entry .permalink a{
+color:#b4bfd5;
+}
+
+#sidebar{   
+background-color:{color:Sidebar};
+width:220px;
+top:120px;
+margin-left:180px;
+position:fixed;
+padding:3px;
+text-align:center;
+float:center;
+}
+
+
+#rep a{position: fixed; bottom: 10px; margin-left: 5px; left: 0px; z-index: 2; -webkit-transition: all 0.5s; -moz-transition: all 0.5s; transition: all 0.5s; display: inline-block; text-transform: uppercase; letter-spacing: 2px; background: {color:link}; color: {color:background}; text-align: center; width: 55px; padding: 5px 2px 5px 2px; opacity: .7;-webkit-border-radius: 500px;-moz-border-radius: 500px;border-radius: 500px; width:auto; font-size:15px; font-family:georgia; text-decoration:none;}
+#rep a:hover{ color: {color:link}; background: {color:background};}
+ 
+#sidebar img{height:auto; width:210px; opacity:1;   padding:0px; border: 1px solid #f8f8f8; background: white;}
+   
+#sidebar img:hover{
+-webkit-transition: opacity 0.8s linear;
+opacity: 1;}
+
+#sblinks{
+    font-family:calibri;
+font-size:11px;text-transform:lowercase;opacity:.8;
+-webkit-transition: all .4s ease;
+-moz-transition: all .4s ease;
+-o-transition: all .4s ease;
+transition: all .4s ease;
+    border-top: 1px solid {color:link};
+
+}
+#sblinks a {
+    padding: 1px 0;
+        text-shadow: none;
+-webkit-transition: all .4s ease;
+-moz-transition: all .4s ease;
+-o-transition: all .4s ease;
+transition: all .4s ease;
+} 
+
+#sblinks a:hover{
+            font-weight:bold;
+        color:{color:link hover};
+}
+
+.pagination {
+display: none;
+}
+
+.title {
+font-family: arial;
+font-size: 13px;
+opacity:.7;
+text-transform:uppercase;
+padding: 2px; 
+}
+
+.permalinkss{
+display: block;
+padding: 4px;
+margin: 9px 0px 0px 0px;
+text-transform:uppercase;
+font-family:times new roman;
+font-size: 7px;
+line-height: 11px;
+letter-spacing:1px;
+text-align: center;
+font-style: none;
+text-decoration: none;
+border-top: 1px solid #eee;
+background-color:#fff;
+webkit-transition: all 0.2s linear;
+-webkit-transition: all 0.2s linear;
+-moz-transition: all 0.2s linear;
+transition: all 0.2s linear;
+color: {links};
+}
+.audio {height:47px;margin-bottom:10px;}
+.audio-player{height:26px;width:26px; margin-top: 7px; margin-left: 7px;overflow:hidden;opacity:0.6;border: 3px solid #f9f9f9; position:absolute; z-index:2; }
+.audio-album { position:absolute; width:32px; border: 7px solid #efefef;}
+.audio-info { height: 30px;margin-left:45px; padding:10px 10px 10px 10px;text-align:left; font-family:arial;font-size:10px;line-height:80%;}
+blockquote{
+padding:0px 0px 0px 5px;
+margin:0px 0px 0px 10px;
+border-left: 1px solid #ddd;
+}
+{CustomCSS]</style>
+ 
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+ 
+<script src="http://static.tumblr.com/6hsqxdt/vmwm2rb4g/infinitescrolling.js"></script><script src="http://static.tumblr.com/6hsqxdt/QBym35odk/jquery.masonry.js"></script>
+ 
+<script>
+$(function(){
+var $container = $('#post');
+$container.imagesLoaded(function(){
+$container.masonry({
+itemSelector: '.entry',
+});
+});
+$container.infinitescroll({
+itemSelector : ".entry",
+navSelector : "div.pagination",
+nextSelector : ".pagination a#next",
+loadingImg : "",
+loadingText : "<em></em>",
+bufferPx : 10000,
+extraScrollPx: 12000,
+},
+// trigger Masonry as a callback
+function( newElements ) {
+  var $newElems = $( newElements ).css({ opacity: 0 });
+// ensure that images load before adding to masonry layout
+$newElems.imagesLoaded(function(){
+$newElems.animate({ opacity: 1 });
+$container.masonry( 'appended', $newElems, true );
+});
+}
+);
+});
+</script>
+ 
+</head>
+<body>
+ 
+<div id="sidebar">
+{block:ifshowsidebarimage}
+<center><a href="/"><img src="{image:sidebar}" width="200"></a></center>
+{/block:ifshowsidebarimage}<div style="{block:ifshowsidebarimage}margin-top:1px;{/block:ifshowsidebarimage}">
+<br>
+{description}<br><br>
+<div id="sblinks">
+
+<a href="/">home</a>
+<a href="/ask">ask</a>
+{block:HasPages}{block:Pages}<a href="{URL}">{Label}</a> {/block:Pages} {/block:HasPages}
+<a href="{Text:Link One}">{Text:Link One Title}</a>
+<a href="{Text:Link Two}">{Text:Link Two Title}</a>
+<a href="{Text:Link Three}">{Text:Link Three Title}</a>
+<a href="{Text:Link Four}">{Text:Link Four Title}</a>
+<a href="{Text:Link Five}">{Text:Link Five Title}</a>
+<a href="http://repealinq.tumblr.com">Theme</a>    
+</div>
+</div></div><!--Sidebar End-->
+
+
+<div id="rep"><a href="http://repealinq.tumblr.com">&nbsp;r&nbsp;</a></div>
+
+<div id="post">
+{block:Posts}
+<div class="entry">
+ 
+ 
+ 
+{block:Text}<span class="title">{Title}</span>{Body}
+{Block:IndexPage}
+<div class="permalinkss">Posted <a href="{permalink}">{timeago} </a> with <a href="{permalink}">{NoteCountwithlabel}</a> &middot <a href="{ReblogURL}" target="_blank">reblog</a></div>{/Block:IndexPage}
+{/block:Text}
+ 
+{block:Photo}
+
+{Block:IndexPage}<div class="perma"><a href="{Permalink}">{NoteCountWithLabel} </a> &middot <a href="{ReblogUrl}">REBLOG</a> <br> <a href="{Permalink}">{TimeAgo}</a> </div><a href="{permalink}"><img src="{PhotoURL-500}" width="250"/></a>{/Block:IndexPage}
+{block:PermalinkPage}<img src="{PhotoURL-500}"/>{/block:PermalinkPage}
+{/block:Photo}
+ 
+{block:Photoset}
+{Photoset-250}
+{Block:IndexPage}
+<div class="permalinkss">Posted <a href="{permalink}">{timeago} </a> with <a href="{permalink}">{NoteCountwithlabel}</a> &middot <a href="{ReblogURL}" target="_blank">reblog</a></div>{/Block:IndexPage}
+{/block:Photoset}
+ 
+ 
+{block:Quote}
+{Quote}
+<div align="right">
+{block:Source}-{Source}{/block:Source}
+</div>
+{Block:IndexPage}
+<div class="permalinkss">Posted <a href="{permalink}">{timeago} </a> with <a href="{permalink}">{NoteCountwithlabel}</a> &middot <a href="{ReblogURL}" target="_blank">reblog</a></div>{/Block:IndexPage}
+{/block:Quote}
+ 
+ 
+{block:Video}
+{Video-250}
+ <br>
+{PlayCountWithLabel}
+{Block:IndexPage}
+<div class="permalinkss">Posted <a href="{permalink}">{timeago} </a> with <a href="{permalink}">{NoteCountwithlabel}</a> &middot <a href="{ReblogURL}" target="_blank">reblog</a></div>{/Block:IndexPage}
+{/block:Video}
+ 
+ 
+{block:Link}<a href="{URL}" style="font-size:21px;font-family:calibri;">{Name}</a>{block:Description}<div class="body">{Description}</div>{/block:Description} {Block:IndexPage}<div class="permalinkss">Posted <a href="{permalink}">{timeago} </a> with <a href="{permalink}">{NoteCountwithlabel}</a> &middot <a href="{ReblogURL}" target="_blank">reblog</a></div>{Block:IndexPage}{block:Link}
+
+
+ 
+{block:Chat}
+{block:Lines}
+{block:Label}
+<br>{Label}
+{/block:Label}
+&nbsp;{Line}
+{/block:Lines}
+{Block:IndexPage}
+<div class="permalinkss">Posted <a href="{permalink}">{timeago} </a> with <a href="{permalink}">{NoteCountwithlabel}</a> &middot <a href="{ReblogURL}" target="_blank">reblog</a></div>{/Block:IndexPage}
+{/block:Chat}
+ 
+{block:Audio}
+<div class="audio">
+{block:AlbumArt}<img class="audio-album" src="{AlbumArtURL}" style="width:32px;">{/block:AlbumArt}
+<div class="audio-player">{block:AudioPlayer}{AudioPlayerWhite}{/block:AudioPlayer}</div>
+ <div class="audio-info">
+{block:TrackName} {TrackName}<br>{/block:TrackName}
+ {block:Artist} <b><audioshit> Artist :</audioshit></b><br> {Artist} {/block:Artist}<br>{block:TrackName} <b><audioshit>Song Title:</audioshit></b><br> "{TrackName}" {/block:TrackName}</br> 
+</div></div>
+{Block:IndexPage}
+<div class="permalinkss">Posted <a href="{permalink}">{timeago} </a> with <a href="{permalink}">{NoteCountwithlabel}</a> &middot <a href="{ReblogURL}" target="_blank">reblog</a></div>{/Block:IndexPage}
+{/block:Audio}
+ 
+ 
+{block:Answer}
+<div style="background:#eee;padding:4px;border-radius:3px;">
+ {Asker} : <b>{Question}</b><Br></div>
+{Answer}
+{Block:IndexPage}
+<div class="permalinkss">Posted <a href="{permalink}">{timeago} </a> with <a href="{permalink}">{NoteCountwithlabel}</a> &middot <a href="{ReblogURL}" target="_blank">reblog</a></div>{/Block:IndexPage}
+{/block:Answer}
+ 
+{block:PermalinkPage}
+{block:Caption}
+{Caption}
+{/block:Caption}
+<br>
+{block:NoteCount}
+{NoteCount} notes
+{/block:NoteCount}
+<Br>
+{block:PostNotes}{PostNotes}{/block:PostNotes}</div>
+{/block:PermalinkPage}
+</div>
+ 
+{/block:Posts}
+ 
+</div>
+<div class="pagination">
+{block:Pagination}{block:PreviousPage}<a href="{PreviousPage}">previous</a> &middot;{/block:PreviousPage} {block:NextPage}<a href="{NextPage}" id="next">next</a>{/block:NextPage}{/block:Pagination}
+</div>
+ 
+
+</body>
+</html>
